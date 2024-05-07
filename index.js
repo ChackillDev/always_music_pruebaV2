@@ -1,5 +1,4 @@
 // Conexión a BBDD Postgres
-
 const { Pool } = require("pg");
 const config = {
     host: "localhost",
