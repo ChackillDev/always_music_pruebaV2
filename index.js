@@ -13,7 +13,7 @@ const pool = new Pool(config);
 const argumentos = process.argv.slice(2)
 let accion = argumentos[0];
 
-//1. Crear una función asíncrona para registrar un nuevo estudiante en la base de datos.(2 puntos)
+
 
 /* insertar Alumno*/
 
@@ -34,7 +34,6 @@ const insertAlumno = async () => {
     }
 };
 
-// 2. Crear una función asíncrona para obtener por consola el registro de un estudiante por medio de su rut. (2 puntos)
 
 /* Consultar por rut*/
 
@@ -51,7 +50,6 @@ const consultaRut = async () => {
     }
 };
 
-// 3. Crear una función asíncrona para obtener por consola todos los estudiantes registrados. (2 puntos)
 
 /* Consultar Alumnos*/
 
@@ -67,7 +65,6 @@ const consultaAlumnos = async () => {
     }
 };
 
-// 4. Crear una función asíncrona para actualizar los datos de un estudiante en la base de datos. (2 puntos)
 
 /* modificar datos*/
 
@@ -90,7 +87,6 @@ const editaAlumno = async () => {
     }
 };
 
-// 5.- Crear una función asíncrona para eliminar el registro de un estudiante de la base de datos. (2 puntos)
 /* eliminar datos*/
 const eliminaAlumno = async () => {
     let rut = argumentos[1];
@@ -130,5 +126,5 @@ switch (accion) {
         eliminaAlumno();// [ 'rut' ]
         break;
     default:
-        console.log('elija entre las acciones: "nuevo","rut","consulta","editar","eliminar"');
+        console.log('USO: node index [accion] [parametros]; elija entre las acciones: "nuevo","rut","consulta","editar","eliminar"');
 }
